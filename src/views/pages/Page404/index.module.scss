@@ -1,0 +1,34 @@
+@import '../../../styles/assets/mixins/responsive_fonts.scss';
+
+.page404 {
+    .notFoundInner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        
+        h1.title {
+            @include responsive_font(130, 60);
+            font-family: 'Lato200';
+            letter-spacing: .5px;
+            line-height: 1;
+            color: #B3BAC1;
+            text-align: center !important;
+        }
+
+        h2.subtitle {
+            @include responsive_font(16, 10);
+            font-family: 'Lato600';
+            letter-spacing: .5px;
+            color: #B3BAC1;
+            text-align: center !important;
+        }
+
+        p {
+            @include responsive_font(14, 10);
+            font-family: 'Lato400';
+            color: #B3BAC1;
+        }
+    }
+}

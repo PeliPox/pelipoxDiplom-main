@@ -1,0 +1,61 @@
+@import '../../../styles/assets/mixins/responsive_fonts.scss';
+
+.mainTitle,
+.title,
+.subTitle,
+.header,
+.topic,
+.subject {
+    display: inline-block;
+    width: 100%;
+    font-style: normal;
+    line-height: normal;
+    color: var(--color);
+}
+
+.mainTitle {
+    @include responsive_font(22, 22);
+    font-family: 'Lato900';
+}
+
+.title {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    @include responsive_font(22, 22);
+    font-family: 'Lato900';
+}
+
+.subTitle {
+    font-family: 'Lato900';
+    @include responsive_font(18, 18);
+}
+
+.header {
+    font-family: 'Lato800';
+    @include responsive_font(16, 16);
+}
+
+.title[data-no-padding] {
+    padding: 0;
+}
+
+.title[data-no-margin] {
+    margin: 0;
+}
+
+.mainTitle,
+.title,
+.subTitle,
+.header,
+.topic,
+.subject {
+    &[data-align='left'] {
+        text-align: left;
+    }
+    &[data-align='right'] {
+        text-align: right;
+    }
+    &[data-align='center'] {
+        text-align: center;
+    }
+}
